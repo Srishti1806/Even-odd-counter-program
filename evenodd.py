@@ -18,3 +18,21 @@ def count_numbers(numbers):
             odd_count += 1
     print("Even numbers:", even_count)
     print("Odd numbers:", odd_count)
+# Prime Number Counter Program
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def count_primes(numbers):
+    prime_count = 0
+
+    for n in numbers:
+        if is_prime(n):
+            prime_count += 1
+
+    print("Prime numbers:", prime_count)
